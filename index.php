@@ -173,12 +173,12 @@
                     <form>
                         <div id="simple" ng-if="interest.type == 'Simple'">
                             <div class="form-group" ng-controller="SimpleInterestCalculator" col-md-8>
-                                <label for="principal">Principal:</label>
-                                <input type="text" id="principal" class="form-control" placeholder="Principal" ng-model="principal" valid-number />
+                                <label for="principal">Principal Amount:</label>
+                                <input type="text" id="principal" class="form-control" placeholder="Amount" ng-model="principal" valid-number />
                                 <label for="time">Time:</label>
                                 <input type="text" id="time" class="form-control" placeholder="Time in months" ng-model="time" valid-number />
                                 <label for="rate">Rate of Interest:</label>
-                                <input type="text" id="rate" class="form-control" placeholder="Rate" ng-model="rate" valid-number />
+                                <input type="text" id="rate" class="form-control" placeholder="Rate (per year)" ng-model="rate" valid-number />
                                 <br />
                                 <input type="button" value="Calculate" ng-click="Calculate()" />
                                 <br />
@@ -194,12 +194,12 @@
                         <div id="compound" ng-if="interest.type == 'Compound'">
 
                             <div class="form-group" ng-controller="CompoundInterestCalculator" col-md-8>
-                                <label for="principal">Principal:</label>
-                                <input type="text" class="form-control" id="principal" placeholder="Principal" ng-model="principal" valid-number />
+                                <label for="principal">Principal Amount:</label>
+                                <input type="text" class="form-control" id="principal" placeholder="Amount" ng-model="principal" valid-number />
                                 <label for="time">Time:</label> 
                                 <input type="text" class="form-control" placeholder="Time in months" id="time" ng-model="time" valid-number />
                                 <label for="rate">Rate of Interest:</label>
-                                <input type="text" class="form-control" id="rate" placeholder="Rate" ng-model="rate" valid-number />
+                                <input type="text" class="form-control" id="rate" placeholder="Rate (per year)" ng-model="rate" valid-number />
                                 <label for="frequency">Compound Frequency:</label>
 
                                 <select name="frequency" id="frequency" ng-model="frequency" ng-dropdown required class="form-control">
