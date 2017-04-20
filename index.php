@@ -173,11 +173,11 @@
                     <form>
                         <div id="simple" ng-if="interest.type == 'Simple'">
                             <div class="form-group" ng-controller="SimpleInterestCalculator" col-md-8>
-                                <label for="principal">Loan Amount:</label>
+                                <label for="principal">Principal:</label>
                                 <input type="text" id="principal" class="form-control" ng-model="principal" valid-number />
-                                <label for="months">No. of Months:</label>
+                                <label for="months">Time(in months):</label>
                                 <input type="text" id="months" class="form-control" ng-model="months" valid-number />
-                                <label for="rate">Rate of Interest:</label>
+                                <label for="rate">Rate of Interest(%):</label>
                                 <input type="text" id="rate" class="form-control" ng-model="rate" valid-number />
                                 <br />
                                 <input type="button" value="Calculate" ng-click="Calculate()" />
@@ -194,11 +194,11 @@
                         <div id="compound" ng-if="interest.type == 'Compound'">
 
                             <div class="form-group" ng-controller="CompoundInterestCalculator" col-md-8>
-                                <label for="principal">Loan Amount:</label>
+                                <label for="principal">Principal:</label>
                                 <input type="text" class="form-control" id="principal" ng-model="principal" valid-number />
-                                <label for="months">No. of Months:</label>
+                                <label for="months">Time(in months):</label>
                                 <input type="text" class="form-control" id="months" ng-model="months" valid-number />
-                                <label for="rate">Rate of Interest:</label>
+                                <label for="rate">Rate of Interest(%):</label>
                                 <input type="text" class="form-control" id="rate" ng-model="rate" valid-number />
                                 <label for="frequency">Compound Frequency:</label>
 
