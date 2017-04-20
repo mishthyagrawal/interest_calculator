@@ -2,16 +2,16 @@
     var app = angular.module('calcApp', []);
     //simple interest controller
     app.controller('SimpleInterestCalculator', function($scope) {
-        $scope.principal = 0;
-        $scope.rate = 0;
-        $scope.months = 0;
+        $scope.principal;
+        $scope.rate;
+        $scope.time;
         var tenurePeriodVal = 12; // months
 
         $scope.IsHidden = true;
 
         $scope.Calculate = function() {
             //cal total
-            $scope.total = $scope.principal * (1 + ($scope.rate / 100) * $scope.months / tenurePeriodVal);
+            $scope.total = $scope.principal * (1 + ($scope.rate / 100) * $scope.time / tenurePeriodVal);
             //calc compound interest
             $scope.interest = $scope.total - $scope.principal;
             //show div
@@ -22,17 +22,17 @@
 
     //compound interest controller
     app.controller('CompoundInterestCalculator', function($scope) {
-        $scope.principal = 0;
-        $scope.rate = 0;
-        $scope.months = 0;
-        $scope.frequency = 0;
+        $scope.principal;
+        $scope.rate;
+        $scope.time;
+        $scope.frequency;
         var tenurePeriodVal = 12; // months
 
         $scope.IsHidden = true;
 
         $scope.Calculate = function() {
             //cal total
-            $scope.total = $scope.principal * (Math.pow((1 + $scope.rate / (100 * $scope.frequency)), ($scope.months * $scope.frequency / tenurePeriodVal)));
+            $scope.total = $scope.principal * (Math.pow((1 + $scope.rate / (100 * $scope.frequency)), ($scope.time * $scope.frequency / tenurePeriodVal)));
             //calc compound interest
             $scope.interest = $scope.total - $scope.principal;
             //show div
