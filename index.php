@@ -175,7 +175,7 @@
                             <div class="form-group" ng-controller="SimpleInterestCalculator" col-md-8>
                                 <label for="principal">Principal:</label>
                                 <input type="text" id="principal" class="form-control" placeholder="Principal" ng-model="principal" valid-number />
-                                <label for="time">Time:</label>placeholder="Principal" 
+                                <label for="time">Time:</label>
                                 <input type="text" id="time" class="form-control" placeholder="Time in months" ng-model="time" valid-number />
                                 <label for="rate">Rate of Interest:</label>
                                 <input type="text" id="rate" class="form-control" placeholder="Rate" ng-model="rate" valid-number />
